@@ -1,0 +1,58 @@
+body {
+    text-align: center;
+}
+
+.currentImage {
+    opacity: 1;
+    width: 50%;
+    margin: 10px;
+}
+
+.nextImage, .prevImage {
+    opacity: 0.5;
+    width: 25%;
+    filter: url("data:image/svg+xml;utf8,&lt;svg xmlns=\'http://www.w3.org/2000/svg\'&gt;&lt;filter id=\'grayscale\'&gt;&lt;feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/&gt;&lt;/filter&gt;&lt;/svg&gt;#grayscale");
+    filter: gray;
+    -webkit-filter: grayscale(100%);
+    cursor: pointer;
+}
+
+.nextImage:hover, .prevImage:hover {
+    filter: url("data:image/svg+xml;utf8,&lt;svg xmlns=\'http://www.w3.org/2000/svg\'&gt;&lt;filter id=\'grayscale\'&gt;&lt;feColorMatrix type=\'matrix\' values=\'1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0\'/&gt;&lt;/filter&gt;&lt;/svg&gt;#grayscale");
+    -webkit-filter: grayscale(0%);
+}
+
+.carousel {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.imgWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.slideImg {
+    flex: 0 1 auto;
+}
+
+button {
+    background: black;
+    color: white;
+    border: 0;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+button:hover {
+    background: #3F51B5;
+    cursor: pointer;
+}
+
+button:focus {
+    background: #1b2b84;
+    outline: none;
+}
